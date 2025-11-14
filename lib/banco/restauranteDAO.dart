@@ -1,19 +1,18 @@
-import 'package:aula1/banco/database_helper.dart';
+
 import '../restaurante.dart';
+import 'database_helper.dart';
 
 class RestauranteDAO{
 
-  static Future<List<Restaurante>> listarTodos() async{
+  static Future<List<Restaurante>> listarTodos() async {
     final db = await DatabaseHelper.getDatabase();
     final resultado = await db.query('tb_restaurante');
 
     return resultado.map((mapa){
       return Restaurante(
-          cod: mapa['cd_restaurante'] as int,
-          nome: mapa['nm_restaurante'] as String
+        cod: mapa['cd_restaurante'] as int,
+        nome: mapa['nm_restaurante'] as String
       );
     }).toList();
-
-
   }
 }

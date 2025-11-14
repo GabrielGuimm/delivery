@@ -1,4 +1,6 @@
-import 'package:aula1/usuario.dart';
+
+
+import 'usuario.dart';
 
 class Restaurante{
   int? _codigo;
@@ -8,7 +10,6 @@ class Restaurante{
   Usuario? _proprietario;
   String? _tipo;
 
-
   int? get codigo => _codigo;
   String? get nome => _nome;
   String? get latitude => _latitude;
@@ -16,28 +17,21 @@ class Restaurante{
   Usuario? get proprietario => _proprietario;
   String? get tipo => _tipo;
 
+    set codigo(int? valor) => _codigo = valor;
+    set nome(String? valor) => _nome = valor;
+    set latitude(String? valor) => _latitude = valor;
+    set longitude(String? valor) => _longitude = valor;
+    set proprietario(Usuario? valor) => _proprietario = valor;
+    set tipo(String? valor) => _tipo = valor;
 
-  set codigo (int? valor) => _codigo = valor;
-  set nome (String? valor) => _nome = valor;
-  set latitude (String? valor) => _latitude = valor;
-  set longitude (String? valor) => _longitude = valor;
-  set proprietario (Usuario? valor) => _proprietario = valor;
-  set tipo (String? valor) => _tipo = valor;
+    Restaurante({int? cod, String? nome, String? lat, String? lon, Usuario? u, String? tipo}){
+      _codigo = cod;
+      _nome = nome;
+      _latitude = lat;
+      _longitude = lon;
+      _proprietario = u;
+      _tipo = tipo;
+    }
 
-  Restaurante({
-    int? cod,
-    String? nome,
-    String? lat,
-    String? lon,
-    Usuario? u,
-    String? tipo
-  }){
-    _codigo = cod;
-    _nome = nome;
-    _latitude = lat;
-    _longitude = lon;
-    _proprietario = u;
-    _tipo = tipo;
-  }
 
 }
