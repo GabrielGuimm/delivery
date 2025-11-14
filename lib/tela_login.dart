@@ -82,8 +82,8 @@ class telaLoginState extends State<telaLogin>{
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                       content: Text('Usuario e/ou senha inválido.',
-                                    style: TextStyle(color: Colors. blueAccent)),
-                      backgroundColor: Colors.white,
+                                    style: TextStyle(color: Colors.black, fontSize: 18)),
+                      backgroundColor: Colors.yellowAccent,
 
 
 
